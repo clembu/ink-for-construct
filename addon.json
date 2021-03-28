@@ -5,8 +5,8 @@
 	"id": "SmugRainbowPony_INK",
 	"version": "1.0.0.0",
 	"author": "SmugRainbowPony",
-	"website": "https://www.construct.net",
-	"documentation": "https://www.construct.net",
+	"website": "https://github.com/clembu/ink-for-construct",
+	"documentation": "https://github.com/clembu/ink-for-construct/blob/master/README.md",
 	"description": "Provides easy support for Ink stories",
 	"editor-scripts": [
 		"plugin.js",
