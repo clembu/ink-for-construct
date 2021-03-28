@@ -1,0 +1,205 @@
+﻿{
+	"languageTag": "en-US",
+	"fileDescription": "Strings for Ink.",
+	"text": {
+		"plugins": {
+			"smugrainbowpony_ink": {
+				"name": "Ink",
+				"description": "Provides easy support for Ink stories",
+				"aceCategories": {
+					"ink": "Ink",
+					"ink-tags": "Ink Tags",
+					"ink-choices": "Ink Choices",
+					"ink-variables": "Ink Variables"
+				},
+				"conditions": {
+					"can-continue": {
+						"list-name": "Can continue",
+						"display-text": "Story can continue",
+						"description": "Test if the story can continue."
+					},
+					"has-choices": {
+						"list-name": "Has choices",
+						"display-text": "Story has choices available",
+						"description": "Test if the story has choices to pull from."
+					},
+					"for-each-choice": {
+						"list-name": "For each choice",
+						"display-text": "For each available choice",
+						"description": "Loop over every currently available choice. Use 'LoopChoiceText' and 'LoopChoiceIndex' to get its info."
+					},
+					"for-each-tag": {
+						"list-name": "For each tag",
+						"display-text": "For each available tag",
+						"description": "Loop over every currently available tag. Use 'LoopTagText' to get its content."
+					},
+					"check-tags": {
+						"list-name": "Check tags",
+						"display-text": "Tags contain {0}",
+						"description": "Check for tags in the story",
+						"params": {
+							"tag": {
+								"name": "Tag",
+								"desc": "The tag to look for"
+							}
+						}
+					},
+					"var-changed": {
+						"list-name": "Variable changed",
+						"display-text": "Variable {0} has changed",
+						"description": "Trigger when variable changes values",
+						"params": {
+							"var": {
+								"name": "Variable",
+								"desc": "The name of the ink variable to watch"
+							}
+						}
+					}
+				},
+				"actions": {
+					"set-story": {
+						"list-name": "Set story",
+						"display-text": "Load story from {0}",
+						"description": "Load a story in the ink engine",
+						"params": {
+							"story-json": {
+								"name": "Story JSON string",
+								"desc": "The story data to load into ink. Most likely coming from a file."
+							}
+						}
+					},
+					"load-state": {
+						"list-name": "Load Story State",
+						"display-text": "Load state from {0}",
+						"description": "Load a story state from a JSON string.",
+						"params": {
+							"state": {
+								"name": "Story State JSON string",
+								"desc": "The story state to load into the story. Most likely coming from a file."
+							}
+						}
+					},
+					"continue": {
+						"list-name": "Continue",
+						"display-text": "Continue (maximally: {0})",
+						"description": "Ask the story to move on.",
+						"params": {
+							"maximally": {
+								"name": "Maximally",
+								"desc": "Check this if you want to get as far as you can."
+							}
+						}
+					},
+					"choose": {
+						"list-name": "Choose",
+						"display-text": "Choosing (choice {0})",
+						"description": "Select a choice from the choice list",
+						"params": {
+							"choice": {
+								"name": "Choice",
+								"desc": "The index of the choice in the list."
+							}
+						}
+					},
+					"go-to": {
+						"list-name": "Go to",
+						"display-text": "Go to {0}",
+						"description": "Divert the story to a different place.",
+						"params": {
+							"path": {
+								"name": "Path",
+								"desc": "The ink path to go to."
+							}
+						}
+					},
+					"start-watching-var": {
+						"list-name": "Watch variable",
+						"display-text": "Listening for changes in {0}",
+						"description": "Start listening for changes in ink variable.",
+						"params": {
+							"var": {
+								"name": "Variable",
+								"desc": "The ink variable to start listening."
+							}
+						}
+					},
+					"set-variable": {
+						"list-name": "Set variable",
+						"display-text": "Set Variable: {0} <- {1}",
+						"description": "Set the value of an ink variable.",
+						"params": {
+							"var": {
+								"name": "Variable",
+								"desc": "The ink variable to set."
+							},
+							"value": {
+								"name": "Value",
+								"desc": "The value to set the variable to."
+							}
+						}
+					}
+				},
+				"expressions": {
+					"save-state": {
+						"description": "The state of the story as a JSON string.",
+						"translated-name": "StateToJson"
+					},
+					"current-text": {
+						"description": "Text built by the last call to Continue.",
+						"translated-name": "CurrentText"
+					},
+					"choice-text": {
+						"description": "Text to display for the given choice.",
+						"translated-name": "ChoiceText",
+						"params": {
+							"choice": {
+								"name": "Choice",
+								"desc": "The index of the choice in the list."
+							}
+						}
+					},
+					"choices-amount": {
+						"description": "Number of available choices.",
+						"translated-name": "ChoicesAmount"
+					},
+					"key-value-tag": {
+						"description": "Get the value corresponding to a key in a tag formatted to have 'KEY SEPARATOR VALUE'. Spaces around SEPARATOR are ignored.",
+						"translated-name": "KeyValueTag",
+						"params": {
+							"sep": {
+								"name": "Separator",
+								"desc": "The separator between KEY and VALUE"
+							},
+							"key": {
+								"name": "Key",
+								"desc": "The KEY to look for in the tags"
+							}
+						}
+					},
+					"loop-choice-index": {
+						"description": "Get the index of the current choice in the loop",
+						"translated-name": "LoopChoiceIndex"
+					},
+					"loop-choice-text": {
+						"description": "Get the text of the current choice in the loop",
+						"translated-name": "LoopChoiceText"
+					},
+					"loop-tag-text": {
+						"description": "Get the text of the current tag in the loop",
+						"translated-name": "LoopTagText"
+					},
+					"var-value": {
+						"description": "The value of an ink variable",
+						"translated-name": "VariableValue",
+						"params": {
+							"var": {
+								"name": "Variable",
+								"desc": "The ink variable to fetch the value for"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
