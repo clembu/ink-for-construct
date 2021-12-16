@@ -14,7 +14,7 @@
     const PLUGIN_ID = "SmugRainbowPony_INK";
     ////////////////////////////////////////////
 
-    const PLUGIN_VERSION = "1.0.1.0";
+    const PLUGIN_VERSION = "1.0.1.1";
     const PLUGIN_CATEGORY = "other";
 
     const PLUGIN_CLASS =
