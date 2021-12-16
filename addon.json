@@ -1,32 +1,28 @@
-﻿{
-	"is-c3-addon": true,
-	"type": "plugin",
-	"name": "Ink",
-	"id": "SmugRainbowPony_INK",
-	"version": "1.0.0.1",
-	"author": "SmugRainbowPony",
-	"website": "https://github.com/clembu/ink-for-construct",
-	"documentation": "https://github.com/clembu/ink-for-construct/blob/master/README.md",
-	"description": "Provides easy support for Ink stories",
-	"editor-scripts": [
-		"plugin.js",
-		"type.js",
-		"instance.js"
-	],
-	"file-list": [
-		"vendor/ink.js",
-		"c3runtime/plugin.js",
-		"c3runtime/type.js",
-		"c3runtime/instance.js",
-		"c3runtime/conditions.js",
-		"c3runtime/actions.js",
-		"c3runtime/expressions.js",
-		"lang/en-US.json",
-		"aces.json",
-		"addon.json",
-		"icon.svg",
-		"instance.js",
-		"plugin.js",
-		"type.js"
-	]
+{
+    "is-c3-addon": true,
+    "type": "plugin",
+    "name": "Ink",
+    "id": "SmugRainbowPony_INK",
+    "version": "1.0.1.0",
+    "author": "SmugRainbowPony",
+    "website": "https://github.com/clembu/ink-for-construct",
+    "documentation": "https://github.com/clembu/ink-for-construct/blob/master/README.md",
+    "description": "Provides easy support for Ink stories",
+    "editor-scripts": ["plugin.js", "type.js", "instance.js"],
+    "file-list": [
+        "vendor/ink.js",
+        "c3runtime/plugin.js",
+        "c3runtime/type.js",
+        "c3runtime/instance.js",
+        "c3runtime/conditions.js",
+        "c3runtime/actions.js",
+        "c3runtime/expressions.js",
+        "lang/en-US.json",
+        "aces.json",
+        "addon.json",
+        "icon.svg",
+        "instance.js",
+        "plugin.js",
+        "type.js"
+    ]
 }

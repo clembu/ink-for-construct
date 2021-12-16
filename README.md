@@ -1,16 +1,16 @@
-- [Ink for Construct](#ink-for-construct)
-- [Loading a story](#loading-a-story)
-- [Loading and saving state](#loading-and-saving-state)
-- [Telling the story](#telling-the-story)
-  - [Advancing the story](#advancing-the-story)
-  - [Getting the text](#getting-the-text)
-  - [Dealing with choices](#dealing-with-choices)
-  - [Using tags](#using-tags)
-    - [Browsing through all the tags](#browsing-through-all-the-tags)
-    - [Checking for a specific tag](#checking-for-a-specific-tag)
-      - [Key-value tags](#key-value-tags)
-  - [Ink variables](#ink-variables)
-- [Advanced usage](#advanced-usage)
+-   [Ink for Construct](#ink-for-construct)
+-   [Loading a story](#loading-a-story)
+-   [Loading and saving state](#loading-and-saving-state)
+-   [Telling the story](#telling-the-story)
+    -   [Advancing the story](#advancing-the-story)
+    -   [Getting the text](#getting-the-text)
+    -   [Dealing with choices](#dealing-with-choices)
+    -   [Using tags](#using-tags)
+        -   [Browsing through all the tags](#browsing-through-all-the-tags)
+        -   [Checking for a specific tag](#checking-for-a-specific-tag)
+            -   [Key-value tags](#key-value-tags)
+    -   [Ink variables](#ink-variables)
+-   [Advanced usage](#advanced-usage)
 
 # Ink for Construct
 
@@ -21,9 +21,9 @@ a Construct 3 game.
 Follow [instructions](https://www.construct.net/en/make-games/manuals/construct-3/tips-and-guides/installing-third-party-addons)
 on the Construct website to install and enable.
 
-The rest of this document explains how to use the plugin within the 
+The rest of this document explains how to use the plugin within the
 construct editor.
-To learn how to use ink as a language, refer to its 
+To learn how to use ink as a language, refer to its
 [own tutorial](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md).
 
 # Loading a story
@@ -58,6 +58,7 @@ can be loaded back into ink with `LoadState`.
 ## Advancing the story
 
 Telling a story with Ink within Construct is done in two steps:
+
 1. Advancing the story
 2. Observing the new state of the story
 
@@ -88,7 +89,7 @@ or do something else for each of them.
 For each choice during the loop, you can use `LoopChoiceText` to get the
 text meant to represent that choice.
 
-In order to pick that choice, you can use the `Choose` action, 
+In order to pick that choice, you can use the `Choose` action,
 and give it `LoopChoiceIndex`. That can be part of a button's `onclick` event
 or at any other moment. `LoopChoiceIndex` gives you the choice's index
 and `Choose` picks the choice with the given index.
@@ -146,7 +147,7 @@ variables evolving in your ink machine.
 If you ever want to get their value from Construct,
 you can use `VariableValue`.
 
-If you want to *set* their value from Construct, you can use
+If you want to _set_ their value from Construct, you can use
 the `Set Variable` action.
 
 There's also a possibility to react instantly to changes in ink variables,
@@ -163,8 +164,9 @@ Anything you can't do with the actions, expressions, and conditions,
 you can most likely do with script.
 
 There's two API endpoints this plugin defines:
-- a way to load a story from a json string: `Ink.loadStory(...)`
-- access to the story: `Ink.story`
+
+-   a way to load a story from a json string: `Ink.loadStory(...)`
+-   access to the story: `Ink.story`
 
 The story itself, once accessed, has the same interface as described by
 [inkjs](https://github.com/y-lohse/inkjs).

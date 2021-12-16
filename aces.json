@@ -1,222 +1,222 @@
-﻿{
-	"ink": {
-		"conditions": [
-			{
-				"id": "can-continue",
-				"scriptName": "CanContinue"
-			}
-		],
-		"actions": [
-			{
-				"id": "set-story",
-				"scriptName": "SetStory",
-				"params": [
-					{
-						"id": "story-json",
-						"type": "string"
-					}
-				]
-			},
-			{
-				"id": "load-state",
-				"scriptName": "LoadState",
-				"params": [
-					{
-						"id": "state",
-						"type": "string"
-					}
-				]
-			},
-			{
-				"id": "continue",
-				"scriptName": "Continue",
-				"highlight": true,
-				"params": [
-					{
-						"id": "maximally",
-						"type": "boolean"
-					}
-				]
-			},
-			{
-				"id": "go-to",
-				"scriptName": "GoTo",
-				"params": [
-					{
-						"id": "path",
-						"type": "string"
-					}
-				]
-			}
-		],
-		"expressions": [
-			{
-				"id": "current-text",
-				"expressionName": "CurrentText",
-				"scriptName": "CurrentText",
-				"highlight": true,
-				"returnType": "string"
-			},
-			{
-				"id": "save-state",
-				"scriptName": "StateToJson"
-			}
-		]
-	},
-	"ink-tags": {
-		"conditions": [
-			{
-				"id": "check-tags",
-				"scriptName": "CheckTags",
-				"params": [
-					{
-						"id": "tag",
-						"type": "string"
-					}
-				]
-			},
-			{
-				"id": "for-each-tag",
-				"scriptName": "ForEachTag",
-				"isLooping": true
-			}
-		],
-		"expressions": [
-			{
-				"id": "key-value-tag",
-				"expressionName": "KeyValueTag",
-				"scriptName": "KeyValueTag",
-				"returnType": "string",
-				"params": [
-					{
-						"id": "key",
-						"type": "string"
-					},
-					{
-						"id": "sep",
-						"type": "string",
-						"initialValue": ":"
-					}
-				]
-			},
-			{
-				"id": "loop-tag-text",
-				"expressionName": "LoopTagText",
-				"scriptName": "LoopTagText",
-				"returnType": "string"
-			}
-		]
-	},
-	"ink-choices": {
-		"conditions": [
-			{
-				"id": "has-choices",
-				"scriptName": "HasChoices"
-			},
-			{
-				"id": "for-each-choice",
-				"scriptName": "ForEachChoice",
-				"isLooping": true
-			}
-		],
-		"actions": [
-			{
-				"id": "choose",
-				"scriptName": "Choose",
-				"params": [
-					{
-						"id": "choice",
-						"type": "number"
-					}
-				]
-			}
-		],
-		"expressions": [
-			{
-				"id": "choice-text",
-				"expressionName": "ChoiceText",
-				"scriptName": "ChoiceText",
-				"returnType": "string",
-				"params": [
-					{
-						"id": "choice",
-						"type": "number"
-					}
-				]
-			},
-			{
-				"id": "choices-amount",
-				"expressionName": "ChoicesAmount",
-				"scriptName": "ChoicesAmount",
-				"returnType": "number"
-			},
-			{
-				"id": "loop-choice-index",
-				"expressionName": "LoopChoiceIndex",
-				"scriptName": "LoopChoiceIndex",
-				"returnType": "number"
-			},
-			{
-				"id": "loop-choice-text",
-				"expressionName": "LoopChoiceText",
-				"scriptName": "LoopChoiceText",
-				"returnType": "string"
-			}
-		]
-	},
-	"ink-variables": {
-		"conditions": [
-			{
-				"id": "var-changed",
-				"scriptName": "VariableChanged",
-				"isTrigger": true,
-				"params": [
-					{
-						"id": "var",
-						"type": "string"
-					}
-				]
-			}
-		],
-		"actions": [
-			{
-				"id": "start-watching-var",
-				"scriptName": "StartObservingVariable",
-				"params": [
-					{
-						"id": "var",
-						"type": "string"
-					}
-				]
-			},
-			{
-				"id": "set-variable",
-				"scriptName": "SetVariable",
-				"params": [
-					{
-						"id": "var",
-						"type": "string"
-					},
-					{
-						"id": "value",
-						"type": "any"
-					}
-				]
-			}
-		],
-		"expressions": [
-			{
-				"id": "var-value",
-				"expressionName": "VariableValue",
-				"scriptName": "VariableValue",
-				"returnType": "any",
-				"params": [
-					{
-						"id": "var",
-						"type": "string"
-					}
-				]
-			}
-		]
-	}
+{
+    "ink": {
+        "conditions": [
+            {
+                "id": "can-continue",
+                "scriptName": "CanContinue"
+            }
+        ],
+        "actions": [
+            {
+                "id": "set-story",
+                "scriptName": "SetStory",
+                "params": [
+                    {
+                        "id": "story-json",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "id": "load-state",
+                "scriptName": "LoadState",
+                "params": [
+                    {
+                        "id": "state",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "id": "continue",
+                "scriptName": "Continue",
+                "highlight": true,
+                "params": [
+                    {
+                        "id": "maximally",
+                        "type": "boolean"
+                    }
+                ]
+            },
+            {
+                "id": "go-to",
+                "scriptName": "GoTo",
+                "params": [
+                    {
+                        "id": "path",
+                        "type": "string"
+                    }
+                ]
+            }
+        ],
+        "expressions": [
+            {
+                "id": "current-text",
+                "expressionName": "CurrentText",
+                "highlight": true,
+                "returnType": "string"
+            },
+            {
+                "id": "save-state",
+                "expressionName": "StateToJson",
+                "returnType": "string"
+            }
+        ]
+    },
+    "ink-tags": {
+        "conditions": [
+            {
+                "id": "check-tags",
+                "scriptName": "CheckTags",
+                "params": [
+                    {
+                        "id": "tag",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "id": "for-each-tag",
+                "scriptName": "ForEachTag",
+                "isLooping": true
+            }
+        ],
+        "expressions": [
+            {
+                "id": "key-value-tag",
+                "expressionName": "KeyValueTag",
+                "scriptName": "KeyValueTag",
+                "returnType": "string",
+                "params": [
+                    {
+                        "id": "key",
+                        "type": "string"
+                    },
+                    {
+                        "id": "sep",
+                        "type": "string",
+                        "initialValue": ":"
+                    }
+                ]
+            },
+            {
+                "id": "loop-tag-text",
+                "expressionName": "LoopTagText",
+                "scriptName": "LoopTagText",
+                "returnType": "string"
+            }
+        ]
+    },
+    "ink-choices": {
+        "conditions": [
+            {
+                "id": "has-choices",
+                "scriptName": "HasChoices"
+            },
+            {
+                "id": "for-each-choice",
+                "scriptName": "ForEachChoice",
+                "isLooping": true
+            }
+        ],
+        "actions": [
+            {
+                "id": "choose",
+                "scriptName": "Choose",
+                "params": [
+                    {
+                        "id": "choice",
+                        "type": "number"
+                    }
+                ]
+            }
+        ],
+        "expressions": [
+            {
+                "id": "choice-text",
+                "expressionName": "ChoiceText",
+                "scriptName": "ChoiceText",
+                "returnType": "string",
+                "params": [
+                    {
+                        "id": "choice",
+                        "type": "number"
+                    }
+                ]
+            },
+            {
+                "id": "choices-amount",
+                "expressionName": "ChoicesAmount",
+                "scriptName": "ChoicesAmount",
+                "returnType": "number"
+            },
+            {
+                "id": "loop-choice-index",
+                "expressionName": "LoopChoiceIndex",
+                "scriptName": "LoopChoiceIndex",
+                "returnType": "number"
+            },
+            {
+                "id": "loop-choice-text",
+                "expressionName": "LoopChoiceText",
+                "scriptName": "LoopChoiceText",
+                "returnType": "string"
+            }
+        ]
+    },
+    "ink-variables": {
+        "conditions": [
+            {
+                "id": "var-changed",
+                "scriptName": "VariableChanged",
+                "isTrigger": true,
+                "params": [
+                    {
+                        "id": "var",
+                        "type": "string"
+                    }
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "id": "start-watching-var",
+                "scriptName": "StartObservingVariable",
+                "params": [
+                    {
+                        "id": "var",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "id": "set-variable",
+                "scriptName": "SetVariable",
+                "params": [
+                    {
+                        "id": "var",
+                        "type": "string"
+                    },
+                    {
+                        "id": "value",
+                        "type": "any"
+                    }
+                ]
+            }
+        ],
+        "expressions": [
+            {
+                "id": "var-value",
+                "expressionName": "VariableValue",
+                "scriptName": "VariableValue",
+                "returnType": "any",
+                "params": [
+                    {
+                        "id": "var",
+                        "type": "string"
+                    }
+                ]
+            }
+        ]
+    }
 }
